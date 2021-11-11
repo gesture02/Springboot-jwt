@@ -8,7 +8,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.cos.jwt.model.User;
 
+import lombok.Data;
+
+@Data
 public class PrincipalDetails implements UserDetails{
+	
 	private User user;
 	
 	public PrincipalDetails(User user) {
@@ -52,6 +56,6 @@ public class PrincipalDetails implements UserDetails{
 
 	@Override
 	public boolean isEnabled() {
-		return false;
+		return true;
 	}
 }
